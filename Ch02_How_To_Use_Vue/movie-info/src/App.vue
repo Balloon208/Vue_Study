@@ -2,7 +2,7 @@
 <div>
   <h1>영화정보</h1>
   <div>
-    <h3>{{ title }}</h3>
+    <h3 class="bg-yellow" :style="textRed">{{ title }}</h3>
     <p>개봉: {{ year }}</p>
     <p>장르: {{ category }}</p>
   </div>
@@ -16,12 +16,16 @@
       return {
         title: "노량",
         year: 2023,
-        category: "액션, 드라마"
+        category: "액션, 드라마",
+        textRed: "color: red"
       }
     },
   }
 </script>
 
 <style>
-
+  .bg-yellow{
+    background: yellow;
+    padding: 10px;
+  }
 </style>
